@@ -21,7 +21,8 @@
 
     <ul>
         {% for project in projects %}
-            <li>Title:<a href="/project/{{ project.id }}">{{ project.title }}</a> --- {{ project.description }} </li>
+{#            //dynamic value injection#}
+            <li>Title:<a href="{% url 'project' project.id %}">{{ project.title }}</a> --- {{ project.description }} </li>
         {% endfor %}
     </ul>
 
